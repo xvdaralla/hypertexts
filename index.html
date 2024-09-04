@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #fdfdfd;
+            margin: 0; 
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Ajustado para overflow-x para evitar rolagem horizontal */
+        }
+        .cabec {
+            background-color: #0e0d2b;
+            height: 100px; 
+            width: 100%;
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 0 20px; 
+            color: white; 
+            box-sizing: border-box; /* Inclui padding no cálculo da largura total */
+        }
+        .logo {
+            width: 150px; /* Reduzi a largura da logo para melhor ajuste em telas menores */
+            z-index: 2;
+        }
+        .profile-menu {
+            display: flex;
+            align-items: center;
+        }
+        .profile-menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px; /* Espaçamento entre os links */
+        }
+        .profile-menu img {
+            width: 35px; /* Ajustado para tamanhos menores */
+            height: 35px;
+            border-radius: 50%; 
+            margin-right: 10px; 
+        }
+        .square, .square2 {
+            background-color: #0e0d2b; 
+            color: white; 
+            border-radius: 20px;
+            position: relative;
+            margin: 20px; /* Adiciona espaçamento para evitar que os elementos fiquem colados nas bordas da tela */
+            box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura total */
+        }
+        .square {
+            width: calc(100% - 40px); /* Ajusta a largura para a tela com padding */
+            height: 300px; /* Altura ajustada para melhor visualização em telas menores */
+            text-align: center;
+            line-height: 200px; 
+            position: relative;
+            background: url(shooting-star-make-a-wish.gif);
+        }
+
+        .square2 {
+            width: calc(100% - 40px); /* Ajusta a largura para a tela com padding */
+            height: 300px; /* Altura ajustada para melhor visualização em telas menores */
+            text-align: center;
+            line-height: 200px; 
+            position: relative;
+        }
+        .profile-menu {
+            margin-left: auto; /* Alinha o menu de perfil à direita */
+        }
+
+        @media (max-width: 768px) {
+            .cabec {
+                flex-direction: column; /* Alinha itens na vertical em telas menores */
+                height: auto;
+                text-align: center;
+            }
+            .logo {
+                width: 120px; /* Reduz o tamanho da logo em telas menores */
+            }
+            .profile-menu {
+                margin: 10px 0 0;
+            }
+            .profile-menu img {
+                width: 30px; /* Ajusta o tamanho da imagem de perfil */
+                height: 30px;
+            }
+            .profile-menu a {
+                margin-left: 5px; /* Ajusta o espaçamento entre links em telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                width: 100px; /* Reduz ainda mais o tamanho da logo em telas muito pequenas */
+            }
+            .profile-menu a {
+                font-size: 12px; /* Ajusta o tamanho da fonte dos links */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="cabec">
+        <img class="logo" src="logosf.png" alt="Logo">
+        <div class="profile-menu">
+            <img src="profile.png" alt="Perfil">
+            <a href="#">Meu Perfil</a>
+            <a href="#">Configurações</a>
+            <a class="exitb" href="#">Sair</a>
+        </div>
+    </header>
+
+    <!-- Quadrado estilizado -->
+    <div class="square">
+        <a href="Type-race-main\index.html">HYPERTEXT GAME</a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum tortor felis.</p>
+    </div>
+
+    <div class="square2" >
+        <h2>Título do Quadrado</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum tortor felis.</p>
+    </div>
+    
+    <script>
+        document.querySelector('.exitb').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

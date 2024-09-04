@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle, #0e0d2b, #04040c);
+            background-size: 100% 100%; /* Divide o background em duas partes iguais */
+            background-repeat: no-repeat;
+        }
+        form {
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #ffffff; /* Cor do texto dentro do formulário */
+            background-image: url('shooting-star-make-a-wish.gif');
+            background-size: cover; /* Para cobrir todo o espaço do formulário */
+        }
+        input[type=text], input[type=password] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type=submit] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5cb85c;
+            color: white;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #4cae4c;
+        }
+        .Cadastre-se {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #297239; /* Cor do link "Cadastre-se" */
+        }
+        a {
+            color: #297239; /* Cor dos links */
+            text-decoration: none; /* Remove o sublinhado dos links */
+        }
+        a:hover {
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre os links */
+        }
+        .logo {
+            width: 250px;
+            height: auto;
+            top: 10px;
+            align-items:center;
+            position: absolute;
+            opacity: 30%;
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="loginForm">
+        <h1>Faça Login</h1>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Entrar">
+        <a class="Cadastre-se" href="#" id="registerLink">Cadastre-se</a>
+    </form>
+    <img class="logo" src="LOGO.png" alt="">
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('registerLink').addEventListener('click', function() {
+            window.location.href = 'cadastro.html';
+        });
+    </script>
+</body>
+</html>

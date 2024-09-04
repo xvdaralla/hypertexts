@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Race</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Type Race</h1>
+        <div class="phrase" id="textDisplay"></div>
+        <input type="text" id="textInput" placeholder="Comece a digitar aqui...">
+        <div class="timer-bar">
+            <div id="progressBar"></div>
+        </div>
+        <div class="result">
+            <p id="timeDisplay"></p>
+            <p id="errorDisplay"></p>
+            <p id="messageDisplay"></p>
+        </div>
+        <button id="startButton">Iniciar</button>
+    </div>
+    <button id="instructionsButton">Instruções</button>
+    <div id="instructionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Instruções</h2>
+            <p>Digite as palavras corretamente, uma de cada vez, para avançar para a próxima palavra.</p>
+            <p>Se você errar uma palavra, terá que corrigi-la antes de continuar.</p>
+            <p>Você tem 30 segundos para completar a frase. Boa sorte!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
